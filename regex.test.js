@@ -17,7 +17,7 @@ which end with io (example@example.io) */
 
 function ioEmail(email){
     
-    return /[A-Za-z]*@[A-Za-z]*.io$/.test(email);
+    return /example@example.io$/.test(email);
 }
 
 /* You have a text that contain image names with their extention you need to write a function to 
@@ -29,8 +29,8 @@ required extention are jpg, jpeg and png.
 
 function imagesSearcher(text){
     let arr = [];
-    // Add your logic.
-    return arr
+    arr.push(text.match(/([A-Za-z]*(.jpg|.jpeg|.png))/g))
+    return arr 
 }
 
 
